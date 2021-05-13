@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="form-signin">
+    <div class="p-3 mb-3 bg-warning text-dark">{{ form.errors }}</div>
+    
+    <form action="" method="POST">
+    {% csrf_token %}
+    <h1 class="h3 mb-3 fw-normal">Вход</h1>
+        <div class="form-floating">
+                <label for="exampleInputEmail1">Логин</label>
+                <input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter username" required>
+              </div>
+              <div class="form-floating">
+                <label for="exampleInputPassword1">Пароль</label>
+                <input type="password" class="form-control" name="password1" id="exampleInputPassword1" placeholder="Password" required>
+          
+              
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+</main>
+{% endblock %}
